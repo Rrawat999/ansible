@@ -1,11 +1,5 @@
 ---
-- name: install and start apache
-   hosts: httpd
-   user: root
-
-   tasks:  
-   -  name: install httpd
-       yum: pkg=httpd state=latest
-
-   -  name: start httpd
-       service: name=httpd state=running
+- hosts: "httpd"
+  tasks:
+    - name: run echo command
+      command: /bin/echo hello k!
